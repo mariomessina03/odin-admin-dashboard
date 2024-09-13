@@ -1,0 +1,298 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}
+
+body,
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* general */
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.left-container {
+  background-color: rgb(25, 146, 212);
+}
+
+.right-container {
+  display: grid;
+
+  grid-template-rows: 2.5fr 9.5fr;
+}
+
+main {
+  background-color: whitesmoke;
+
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 1fr 1fr;
+  gap: 1rem;
+
+  margin: 1.5rem 1.5rem 3.5rem 1.5rem;
+}
+
+.projects h3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.project {
+  padding: 2.5rem 1rem 1rem 2rem;
+}
+
+.second-main-section {
+  display: grid;
+  grid-template-rows: 0.1fr 1.4fr 0.1fr 1.4fr;
+  gap: 1rem;
+  margin: 1.5rem 1.5rem 3.5rem 1.5rem;
+}
+
+.announcements,
+.trending {
+  background-color: white;
+  border-radius: 8px;
+
+  padding: 2.5rem 1rem 2rem 2rem;
+  box-shadow: 2px 2px 6px #888888;
+}
+
+.projects h3,
+.second-main-section h3 {
+  height: fit-content;
+}
+
+/* header styling */
+
+header {
+  display: grid;
+  margin: 0 3.5rem;
+}
+
+.first-row {
+  display: grid;
+  grid-template-columns: 10fr 2fr;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.user-top-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.user-top-section * {
+  margin-right: 2rem;
+}
+
+.second-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-bot-section {
+  display: flex;
+  align-items: center;
+}
+
+.greeting {
+  margin-left: 2rem;
+}
+
+/* font-styling and other secondary things */
+
+h3 {
+  color: rgb(20, 20, 20);
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  color: black;
+  opacity: 0.7;
+}
+
+.project {
+  background: linear-gradient(
+    90deg,
+    rgb(255, 196, 0) 1.5%,
+    rgb(255, 196, 0) 1.5%,
+    white 1.5%,
+    white 98.5%
+  );
+  box-shadow: 2px 2px 6px #888888;
+  border-radius: 8px;
+}
+
+li {
+  display: grid;
+  margin: 1rem 2rem 1.35rem 2rem;
+  grid-template-columns: 1fr 4fr;
+
+  font-size: 1.15rem;
+  font-weight: 700;
+
+  color: white;
+}
+
+.title {
+  margin-bottom: 3.5rem;
+  font-size: 1.7rem;
+}
+
+.communities {
+  margin-bottom: 4rem;
+}
+
+.buttons button {
+  background-color: rgb(25, 146, 212);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 25px;
+  color: white;
+  font-weight: 600;
+
+  margin-right: 2rem;
+}
+
+.announcements h3,
+.trending h3 {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.announcements h4 {
+  opacity: 0.7;
+}
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.ckspacca {
+  border-radius: 100%;
+}
+
+.greeting p {
+  font-size: small;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.greeting p:nth-of-type(2) {
+  font-size: 1.625rem;
+}
+
+.search-container {
+  width: 800px;
+  max-width: 100%;
+}
+
+.search-container input {
+  width: 100%;
+  height: 30px;
+  padding-left: 2rem;
+  background-color: lightgray;
+  border-radius: 30px;
+  border: lightgray;
+}
+
+.search-container button {
+  background-color: transparent;
+  border: none;
+  aspect-ratio: 1;
+}
+
+/* trending style */
+
+.trending img {
+  display: block;
+  height: 50px;
+  width: 50px;
+  aspect-ratio: 1;
+
+  border-radius: 100px;
+  border: 2px solid whitesmoke;
+}
+
+.trending-row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 0.25rem;
+
+  margin-bottom: 2rem;
+}
